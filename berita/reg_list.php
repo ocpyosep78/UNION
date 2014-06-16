@@ -17,7 +17,7 @@
     <?php include 'xmenu/menu_berita.php'; ?>
     
     <div id="tubes_page_intro">
-        <h1>Panel Admin</h1>
+        <h1>List Pendaftar</h1>
         <p align="justify">Selamat datang admin !</p>
     </div>
     
@@ -25,37 +25,16 @@
     <div id="tubes_main">
         <div id="tubes_content" class="left">
             <div class="post-item">
-                <div class="post-meta">
-                    <h3>Selamat datang di panel administrasi</h3>                    
+                <div class="post-meta">                   
                     <div class="clear"></div>
                 </div>
-                <p align="justify">Halaman ini hanya diperuntukkan bagi mereka yang memiliki akses kedalam sistem. Halaman ini berisi beberapa bagian sistem
-                          seperti Panel pembaharuan hingga panel administrasi website. Jika ada kesalahan dalam halaman ini hubungi : </p>
+                <p align="justify">List pendaftar calon mahasiswa/i UNION : </p>
                 
                 <?php
                     include "../berita/xkoneksi/koneksi.php";
                 ?>
-
-                <style>
-                            tbody > tr:nth-child(2n+1) > td, tbody > tr:nth-child(2n+1) > th { 
-                                background-color: #gray;
-                            }
-                            table{
-                                width: auto;
-                                margin: auto;
-                                border-collapse: collapse;
-                                box-shadow: darkgrey 3px;
-                                text-align: center;
-                                border-width: thick;
-
-                            }
-                            thead tr {
-                                background-color: #D4D074;
-                            }
-                </style>
-
     <center>
-        <table>
+        <table id="box-table-a">
             <thead>
                 <tr>
                     <th>Foto</th>
@@ -108,7 +87,7 @@
                 <td><?php echo "$data[df_prodi]";?></td>
                 <td><?php echo "$data[df_jenjang]";?></td>
                 <td><?php echo "$data[df_kontak]";?></td>
-                <td><a href="../mailto : dannu@gmail.com?id=<?php echo "$data[df_id]";?>"><img src="../admin/images/edit.png"</a></td>
+                <td><a href="#<?php echo "$data[df_id]";?>"><img src="../admin/images/edit.png"</a></td>
                 <td><a href="#<?php echo "$data[df_id]";?>$nama_foto=<?php echo "$data[staffdf_foto]";?>">
                     <img src="../admin/images/hapus.png"</a>
                 </td>
@@ -118,8 +97,8 @@
         ?>
             </tbody>
         </table>
-
-            </div>
+        
+            </div>            
         <div class="clear"></div>        
         </div>
                 

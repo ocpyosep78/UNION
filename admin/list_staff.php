@@ -36,33 +36,16 @@
                     include "../admin/xkoneksi/koneksi.php";
                 ?>
 
-                <style>
-                            tbody > tr:nth-child(2n+1) > td, tbody > tr:nth-child(2n+1) > th {
-                                background-color: #gray;
-                            }
-                            table{
-                                width: 500px;
-                                margin: auto;
-                                border-collapse: collapse;
-                                box-shadow: darkgrey 3px;
-                                text-align: center;
-                                border-width: thick;
-                            }
-                            thead tr {
-                                background-color: #D4D074;
-                            }
-                </style>
-
     <center>
-        <table>
+        <table id="box-table-a">
             <thead>
                 <tr>
-                    <th>Profil</th>
-                    <th>Staff ID</th>
-                    <th>NAMA</th>
-                    <th>Jabatan</th>
-                    <th>Alamat</th>
-                    <th>Pendidikan</th>
+                    <th scope="col">Profil</th>
+                    <th scope="col">Staff ID</th>
+                    <th scope="col">NAMA</th>
+                    <th scope="col">Jabatan</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Pendidikan</th>
                 </tr>
             </thead>
         <tbody>
@@ -88,7 +71,9 @@
             </tbody>
         </table>
 
-            </div>
+            </div>           
+            
+        <a href="../admin/create_sk.php" class="more">Tambah Staff</a>
         <div class="clear"></div>        
         </div>
                 

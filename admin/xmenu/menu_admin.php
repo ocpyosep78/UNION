@@ -4,7 +4,7 @@
     	<div id="tubes_menu" class="ddsmoothmenu">
             <ul>
                 <li><a href="admin.php">Beranda</a></li>
-                <li><a href="../admin/logout.php">Logout</a>
+                <li><a href="../index.php">Logout</a>
             </ul>
             <br style="clear: left" />
         </div>

@@ -39,26 +39,19 @@
                         <br/><br/>
                         <div class="col_3 left">
                             <label for="staff_id">ID Staff : </label>
-                            <input type="text" class="input_field" name="staff_id" placeholder="contoh:IDK001" maxlength="6" required/>
+                            <input type="text" class="input_field" name="staff_id" maxlength="6" required/>
                             
                             <label>Nama Staff : </label>
-                            <input type="text" class="input_field" name="staff_nama" placeholder="contoh:Agung Laksono" maxlength="25" required/>
+                            <input type="text" class="input_field" name="staff_nama" rqeuired/>
 
                             <label>Jabatan Staff : </label>
-                            <select name="staff_jabatan" class="input_field" >
-                               <option value="Office Boy">Office Boy</option>
-                               <option value="Security">Sekuriti</option>
-                               <option value="Dosen">Dosen</option>
-                               <option value="Staff IT">Staff IT</option>
-                               <option value="Sekretariat">Sekretariat</option>
-                               <option value="Lainnya">LAINNYA</option>
-                            </select><br/><br/>
+                            <input type="text" class="input_field" name="staff_jabatan" required/>
                         
                             <label>Alamat Staff : </label>
-                            <textarea class="input_field" name="staff_alamat" required/></textarea> 
+                            <input type="text" class="input_field" name="staff_alamat" required/>
 
                             <label>Kontak Staff : </label>
-                            <input type="text" class="input_field" name="staff_kontak" placeholder="email/ponsel" maxlength="12" required/>
+                            <input type="text" class="input_field" name="staff_kontak" required/>
 
                             <label>Pendidikan Staff : </label>
                             <select name="staff_pendidikan" class="input_field" >

@@ -24,27 +24,40 @@
     <div id="tubes_main">
     	<div class="col_32 left">
             <div id="contact_form">
+
+                    <?php
+                      if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+                      echo '<center>';
+                      echo '<img src="images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil mengirim pesan !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
+
                 <h2>Buku tamu</h2>
-                <form method="post" name="contact" action="#">
+                <form method="post" name="contact" action="admin/testimoni.php">
                 
-                <div class="col_3 left">                
+                <div class="col_3 left">
+
+                    <input name="tamu_id" type="hidden" class="input_field" id="tamu_id">
+
                     <label for="nama">Nama:</label> 
-                    <input name="nama" type="text" class="input_field" id="nama" maxlength="30" required/>
+                    <input name="tamu_nama" type="text" class="input_field" id="tamu_nama" maxlength="30" placeholder="nama anda" required/>
                     
                   	<label for="email">Email:</label> 
-               	    <input name="email" type="text" class="input_field" id="email" maxlength="30" required/>
+               	    <input name="tamu_email" type="text" class="input_field" id="tamu_email" maxlength="30" placeholder="email anda" required/>
                     
                     <label for="subyek">Subyek:</label> 
-                    <input name="subyek" type="text" class="input_field" id="subyek" maxlength="30" />
+                    <input name="tamu_subjek" type="text" class="input_field" id="tamu_subjek" placeholder="contoh : tanya" maxlength="30" />
 				</div>
                 
                 <div class="col_3 right">
                     <label for="pesan">Isi Pesan</label> 
-                    <textarea id="pesan" name="pesan" rows="0" cols="0" class="required"></textarea>
+                    <textarea id="tamu_isi" name="tamu_isi" rows="0" cols="0" class="required"></textarea>
 				</div>
                 
                 <div class="clear"></div>
-                 	<input type="submit" name="submit" value="Kirim" class="submit_btn" />
+                 	<input type="submit" name="submit" value="Kirim" class="submit_btn" onclick="return confirm('Anda ingin mengirimkan pesan ?')"/><br/>             
                  
                 </form>
             </div>    

@@ -48,7 +48,7 @@
 			if(!empty($lokasi_file))
 			{
 				rename("../berita/images/reg/$nama_file","../berita/images/reg/$no_reg.$extensi");
-				header ('Location: ../berita/pendaftaran.php');
+				header ('Location: ../berita/daftar_ok.php?message=success');
 			}
 		}
 		else

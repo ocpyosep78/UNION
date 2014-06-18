@@ -29,7 +29,7 @@
 			if(!empty($lokasi_file))
 			{
 				rename("../admin/images/staff/$nama_file","../admin/images/staff/$staff_id.$extensi");
-				header ('Location: ../admin/admin.php');
+				header ('Location: ../admin/create_sk.php?message=success');
 			}
 				
 

@@ -24,12 +24,22 @@
     
     <div id="tubes_main">
         <div id="tubes_content" class="left">
+
+                  <?php
+                      if (!empty($_GET['hapus']) && $_GET['hapus'] == 'success') {
+                      echo '<center>';
+                      echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil menghapus 1 pesan !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
+
             <div class="post-item">
                 <div class="post-meta">
-                    <h3>Panel Staff</h3>                    
+                    <h3>Panel Inbox</h3>                    
                     <div class="clear"></div>
                 </div>
-                <p align="justify">List karyawan dan staff : </p>
+                <p align="justify">Pesan masuk : </p>
                 
                 <?php
                     include "../admin/xkoneksi/koneksi.php";
@@ -39,30 +49,25 @@
         <table id="box-table-a">
             <thead>
                 <tr>
-                    <th scope="col">Profil</th>
-                    <th scope="col">Staff ID</th>
-                    <th scope="col">NAMA</th>
-                    <th scope="col">Jabatan</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Pendidikan</th>
-                    <th scope="col">Kontak</th>
+                    <th scope="col">No</th>
+                    <th scope="col">Pengirim</th>
+                    <th scope="col">Subjek</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Isi</th>
                 </tr>
             </thead>
         <tbody>
         <?php
-            $sql = "SELECT * FROM tb_staff ORDER BY staff_id";
+            $sql = "SELECT * FROM tb_bukutamu ORDER BY tamu_id";
             foreach ($dbh->query($sql) as $data) :
         ?>
             <tr>
-                <td><?php echo "<img src='../admin/images/staff/$data[staff_foto]' width='80' height='80'>";?></td>
-                <td><?php echo "$data[staff_id]";?></td>
-                <td><?php echo "$data[staff_nama]";?></td>
-                <td><?php echo "$data[staff_jabatan]";?></td>
-                <td><?php echo "$data[staff_alamat]";?></td>
-                <td><?php echo "$data[staff_pendidikan]";?></td>
-                <td><?php echo "$data[staff_kontak]";?></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>"><img src="../admin/images/edit.png"</a></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>$nama_foto=<?php echo "$data[staff_foto]";?>">
+                <td><?php echo "$data[tamu_id]";?></td>
+                <td><?php echo "$data[tamu_nama]";?></td>
+                <td><?php echo "$data[tamu_subjek]";?></td>
+                <td><?php echo "$data[tamu_email]";?></td>
+                <td><?php echo "$data[tamu_isi]";?></td>
+                <td><a href="../admin/del_pesan.php?id=<?php echo $data['tamu_id'] ?>" onclick="return confirm('Anda yakin akan menghapus data?')">
                     <img src="../admin/images/hapus.png"</a>
                 </td>
             </tr>
@@ -74,7 +79,7 @@
 
             </div>           
             
-        <a href="../admin/create_sk.php" class="more">Tambah Data</a>
+        <a href="../admin/create_sk.php" class="more">Kosongkan</a>
         <div class="clear"></div>        
         </div>
                 

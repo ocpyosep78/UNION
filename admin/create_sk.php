@@ -25,12 +25,16 @@
     <div id="tubes_main">
         <div id="tubes_content" class="left">
             <div class="post-item">
-                <div class="post-meta">
-                    <h3>Tambah STAFF/KARYAWAN baru</h3>                    
-                    <div class="clear"></div>
-                </div>
-                <p align="justify">Gunakan halaman ini untuk menambah staff/ karyawan baru !</p>
 
+                     <?php
+                          if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+                          echo '<center>';
+                          echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Data berhasil ditambahkan !</font>';
+                          echo '</center>';
+                         }
+                    ?>
+                    <br/><br/>
+              
                 <div class="col_32 left">
                     <div id="contact_form">
                         <form enctype="multipart/form-data" method="post" action="../admin/proses_create_sk.php">
@@ -39,19 +43,26 @@
                         <br/><br/>
                         <div class="col_3 left">
                             <label for="staff_id">ID Staff : </label>
-                            <input type="text" class="input_field" name="staff_id" maxlength="6" required/>
+                            <input type="text" class="input_field" name="staff_id" placeholder="contoh:IDK001" maxlength="6" required/>
                             
                             <label>Nama Staff : </label>
-                            <input type="text" class="input_field" name="staff_nama" rqeuired/>
+                            <input type="text" class="input_field" name="staff_nama" placeholder="contoh:Agung Laksono" maxlength="25" required/>
 
                             <label>Jabatan Staff : </label>
-                            <input type="text" class="input_field" name="staff_jabatan" required/>
+                            <select name="staff_jabatan" class="input_field" >
+                               <option value="Office Boy">Office Boy</option>
+                               <option value="Security">Sekuriti</option>
+                               <option value="Dosen">Dosen</option>
+                               <option value="Staff IT">Staff IT</option>
+                               <option value="Sekretariat">Sekretariat</option>
+                               <option value="Lainnya">LAINNYA</option>
+                            </select><br/><br/>
                         
                             <label>Alamat Staff : </label>
-                            <input type="text" class="input_field" name="staff_alamat" required/>
+                            <textarea class="input_field" name="staff_alamat" required/></textarea> 
 
                             <label>Kontak Staff : </label>
-                            <input type="text" class="input_field" name="staff_kontak" required/>
+                            <input type="text" class="input_field" name="staff_kontak" placeholder="contoh : 081987654321" maxlength="12" required/>
 
                             <label>Pendidikan Staff : </label>
                             <select name="staff_pendidikan" class="input_field" >
@@ -66,7 +77,7 @@
                             <label>Foto Staff : </label>
                             <input type="file" class="input_field" name="staff_foto">
 
-                            <input type="submit" value="Tambah" class="submit_btn">
+                            <input type="submit" value="Tambah" class="submit_btn" onclick="return confirm('Apakah data sudah benar ?')">
                         </form>
                         </div>
                             

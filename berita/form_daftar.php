@@ -29,8 +29,7 @@
                     </div>
                     <div class="clear"></div>
 				</div>
-                <img class="img_border_b img_nom" src="images/daftar/01.jpg" alt="Post Image" /><br/>
-                   
+                <img class="img_border_b img_nom" src="images/daftar/01.jpg" alt="Post Image" /><br/> 
           </div>
 
         <div class="col_32 left">
@@ -41,13 +40,13 @@
                 <div class="col_3 left">
 
                     <label for="nama">No Identitas (KTP/SIM/Kartu Pelajar/Passport) :</label>
-                    <input name="no_reg" type="text" class="input_field" id="no_reg" placeholder="contoh : 203002">
+                    <input name="no_reg" type="text" class="input_field" id="no_reg" placeholder="contoh : 203002" maxlength="12" required/>
 
                     <label for="nama">Nama Lengkap :</label> 
-                    <input name="nama" type="text" class="input_field" id="nama" maxlength="30" required/>
+                    <input name="nama" type="text" class="input_field" id="nama" placeholder="contoh : Indra L" maxlength="30" required/>
                     
                     <label for="tmptlhr">Tempat Lahir :</label> 
-                    <input name="tmptlhr" type="text" class="input_field" id="tmptlhr" maxlength="30" required/>
+                    <input name="tmptlhr" type="text" class="input_field" id="tmptlhr" placeholder="contoh : Bandung" maxlength="30" required/>
                     
                     <label for="tgllahir">Tanggal Lahir : </label> 
                     <input type="date" name="tgllahir" class="input_field" />
@@ -82,18 +81,18 @@
                      </select><br/><br/>
 
                     <label for="thnlulus">Tahun lulus :</label> 
-                    <input name="thnlulus" type="text" class="input_field" required/>
+                    <input name="thnlulus" type="text" class="input_field" placeholder="contoh : 2011" maxlength="4" required/>
 
                     <label for="namasekolah">Nama sekolah :</label> 
-                    <input name="namasekolah" type="text" class="input_field" required/>
+                    <input name="namasekolah" type="text" placeholder="contoh : SMA 1 Dago" class="input_field" required/>
 
                     <hr width="600px">
                     <h5>DATA PRIBADI</h5>
                     <label for="namaayah">Nama Ayah :</label> 
-                    <input name="namaayah" type="text" class="input_field" required/>
+                    <input name="namaayah" type="text" placeholder="contoh : Abi" class="input_field" required/>
 
                     <label for="namaibu">Nama ibu :</label> 
-                    <input name="namaibu" type="text" class="input_field" required/>
+                    <input name="namaibu" type="text" placeholder="contoh : Umi" class="input_field" required/>
 
                     <label for="kerjaayah">Pekerjaan Ayah :</label> 
                     <select name="kerjaayah" class="input_field" >
@@ -118,13 +117,13 @@
                      </select><br/><br/>
 
                     <label for="alamat">Alamat :</label> 
-                    <input name="alamat" type="text" class="input_field" required/>
+                    <input name="alamat" type="text" placeholder="contoh : Kp. Cijerah" class="input_field" required/>
 
                     <label for="kota">Kota :</label> 
-                    <input name="kota" type="text" class="input_field" required/>
+                    <input name="kota" type="text" placeholder="contoh : Bandung" class="input_field" maxlength="15" required/>
 
                     <label for="kodepos">Kode Pos :</label> 
-                    <input name="kodepos" type="text" class="input_field" required/>
+                    <input name="kodepos" type="text" placeholder="contoh : 40377" maxlength="5" class="input_field" required/>
 
                     <hr width="600px">
                     <h5>PRODI PILIHAN</h5>
@@ -148,7 +147,7 @@
                     <input name="foto" type="file" class="input_field" required/>
 
                     <label for="kontak">Kontak :</label> 
-                    <input name="kontak" type="text" class="input_field" required/>
+                    <input name="kontak" type="text" placeholder="contoh : dannu@moccadev.com" maxlength="20" class="input_field" required/>
 
                 </div>
                 

@@ -25,11 +25,21 @@
     <div id="tubes_main">
         <div id="tubes_content" class="left">
             <div class="post-item">
-                <div class="post-meta">
-                    <h3>Panel Staff</h3>                    
+
+                    <?php
+                          if (!empty($_GET['hapus']) && $_GET['hapus'] == 'success') {
+                          echo '<center>';
+                          echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil menghapus data !</font>';
+                          echo '</center>';
+                         }
+                    ?>
+                    <br/><br/>
+                
+                <div class="post-meta">                   
+                    <h3>Panel Kerjasama</h3>                    
                     <div class="clear"></div>
                 </div>
-                <p align="justify">List karyawan dan staff : </p>
+                <p align="justify">List kerjasama : </p>
                 
                 <?php
                     include "../admin/xkoneksi/koneksi.php";
@@ -39,30 +49,26 @@
         <table id="box-table-a">
             <thead>
                 <tr>
-                    <th scope="col">Profil</th>
-                    <th scope="col">Staff ID</th>
-                    <th scope="col">NAMA</th>
-                    <th scope="col">Jabatan</th>
+                    <th scope="col">Logo Perusahaan</th>
+                    <th scope="col">ID Perusahaan</th>
+                    <th scope="col">Nama Perusahaan</th>
                     <th scope="col">Alamat</th>
-                    <th scope="col">Pendidikan</th>
-                    <th scope="col">Kontak</th>
+                    <th scope="col">Detail Kerjasama</th>
                 </tr>
             </thead>
         <tbody>
         <?php
-            $sql = "SELECT * FROM tb_staff ORDER BY staff_id";
+            $sql = "SELECT * FROM tb_kerjasama ORDER BY kj_id";
             foreach ($dbh->query($sql) as $data) :
         ?>
             <tr>
-                <td><?php echo "<img src='../admin/images/staff/$data[staff_foto]' width='80' height='80'>";?></td>
-                <td><?php echo "$data[staff_id]";?></td>
-                <td><?php echo "$data[staff_nama]";?></td>
-                <td><?php echo "$data[staff_jabatan]";?></td>
-                <td><?php echo "$data[staff_alamat]";?></td>
-                <td><?php echo "$data[staff_pendidikan]";?></td>
-                <td><?php echo "$data[staff_kontak]";?></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>"><img src="../admin/images/edit.png"</a></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>$nama_foto=<?php echo "$data[staff_foto]";?>">
+                <td><?php echo "<img src='../prodi/images/kerjasama/$data[kj_foto]' width='200' height='200'>";?></td>
+                <td><?php echo "$data[kj_id]";?></td>
+                <td><?php echo "$data[kj_nama]";?></td>
+                <td><?php echo "$data[kj_alamat]";?></td>
+                <td><?php echo "$data[kj_detail]";?></td>
+                <td><a href="#<?php echo "$data[kj_id]";?>"><img src="../admin/images/edit.png"</a></td>
+                <td><a href="../prodi/delete_kj.php?id=<?php echo $data['kj_id'] ?>" onclick="return confirm('Anda yakin akan menghapus data?')">
                     <img src="../admin/images/hapus.png"</a>
                 </td>
             </tr>
@@ -74,21 +80,12 @@
 
             </div>           
             
-        <a href="../admin/create_sk.php" class="more">Tambah Data</a>
+        <a href="../berita/create_kj.php" class="more">Tambah Data</a>
         <div class="clear"></div>        
         </div>
                 
         <div id="tubes_sidebar" class="right">
             
-
-            <div class="sidebar_section sidebar_section_bg">
-                <form action="" method="post">  
-                <h4>Cari Data Staff</h4>
-                    <input size="30" placeholder="Cari nama staff" type="search" name="cari" id="cari" required>&nbsp;
-                    <input type="image" name"submit" value="submit" src="../images/cari.png">
-                </form>
-            </div>
-
             <div class="sidebar_section sidebar_section_bg">
                 <?php include 'xmenu/side_admin.php';?>
             </div>

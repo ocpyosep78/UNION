@@ -31,7 +31,15 @@
                       echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil menghapus 1 pesan !</font>';
                       echo '</center>';
                      }
-                     ?>
+                    ?>
+                     <br/><br/> 
+                  <?php
+                      if (!empty($_GET['clear']) && $_GET['clear'] == 'success') {
+                      echo '<center>';
+                      echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil mengosongkan kotak pesan !</font>';
+                      echo '</center>';
+                     }
+                    ?>
                      <br/><br/>
 
             <div class="post-item">
@@ -79,7 +87,7 @@
 
             </div>           
             
-        <a href="../admin/create_sk.php" class="more">Kosongkan</a>
+        <a href="../admin/clear_pesan.php" class="more" onclick="return confirm('Anda yakin akan mengosongkan pesan masuk ?')">Kosongkan</a>
         <div class="clear"></div>        
         </div>
                 

@@ -27,7 +27,6 @@
                     <div class="post-meta-content">
                     	<h2>Pendaftaran Mahasiswa/i baru UNION</h2>
                         Posted oleh Admin
-                		| <span><font color="green">14 January 2084</font></span>
                     </div>
                     <div class="clear"></div>
 				</div>

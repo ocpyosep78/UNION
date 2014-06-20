@@ -22,42 +22,13 @@
     
     <div id="tubes_main">
     	<div id="tubes_content" class="left">
-            <h2>Universitas Ontario</h2>
-            <div class="col col_2">
-                <h5>Sejak 1980</h5>
-                    <p align="justify">
-                        Berdiri sejak 1980 menjanjikan pendidikan yang berkualitas bagi bangsa. Mengutamakan kualitas dari pada kuantitas
-                        yang hanya bertitik pada tujuan tertentu. Memiliki tujuan jelas serta menjunjung tinggi nilai, harkat serta martabat
-                        bangsa.
-                    </p>
-                </div>
-            <div class="col col_2 no_mr">
-                <h5>Nomor 1 di Asia Tenggara</h5>
-                <p align="justify">
-                        Universitas Nomor 1 di Asia Tenggara dengan kualitas pendidikan yang menjanjikan serta kurikulum yang selalu 
-                        berkembang mengikuti zaman serta kebutuhan. Bergerak dalam bidang Pariwisata, Sastra dan ketatabahasaan. 
-                    </p>
-                </div>
-            <div class="clear"></div>
-                <div class="col col_3">
-                    <h5>Visi yang jelas</h5>
-                    <p align="justify">
-                            Memiliki visi yang jelas dan melihat jauh kedepan. Serta memiliki tujuan dengan orientasi memajukan
-                            bangsa mulai dari titik yang paling awal.
-                    </p>
-                </div>
-            <div class="col col_32 no_mr">
-                <h5>Visi</h5>
-                <p align="justify">
-                    1. Mencerdaskan bangsa dengan pendidikan yang berkualitas.<br>
-                    2. Menciptakan lulusan yang berpengalaman dalam bidangnya.<br>
-                    3. Membangun bangsa dengan anak didik yang mampu bekerja keras. <br>
-                    4. Menciptakan lulusan dengan wawasan yang luas dan mampu bersaing. <br>
-                    5. Menjadi inovator sekaligus menjadi pembaharuan bagi bangsa.
-                </p>
-            </div>            
-            <div class="clear"></div>
-            
+            <h2>Selamat datang di halaman untuk mahasiswa</h2>
+            <hr>
+            <img class="img_border_b img_nom" src="../mahasiswa/images/kampus/mahasiswa.jpg" alt="Post Image" />
+                <p align="justify">Halaman mahasiswa ini berfungsi untuk memberikan informasi mengenai kurikulum baru,
+                    informasi jadwal kuliah dan panel administrasi akun. <br/>
+
+
         </div> 
                 
 		<div class="col_3 right">

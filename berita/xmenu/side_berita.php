@@ -31,5 +31,10 @@
                         <ul id="node6" style="display:none">
                             <li><a href="../admin/inbox.php">Pesan masuk</a></li>
                         </ul>
+                    </li>                 
+                    <li><a href="#" onclick="toggle('node7')">Panel Kerja sama</a>
+                        <ul id="node7" style="display:none">
+                            <li><a href="../admin/coop_list.php">List Kerja sama</a></li>
+                        </ul>
                     </li>
                 </ul>

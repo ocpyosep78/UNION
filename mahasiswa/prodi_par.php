@@ -13,7 +13,7 @@
 <div id="tubes_wrapper">
 
     
-    <?php include 'xmenu/menu_mhs.php'; ?>
+    <?php include 'xmenu/menu_prodi.php'; ?>
     
     <div id="tubes_page_intro">
     	<h1>Mahasiswa</h1>
@@ -24,27 +24,9 @@
     	<div id="tubes_content" class="left">
             <h2>Selamat datang di halaman untuk mahasiswa</h2>
             <hr>
-            <img class="img_border_b img_nom" src="../mahasiswa/images/kampus/mahasiswa.jpg" alt="Post Image" />
+            <img class="img_border_b img_nom" src="../prodi/images/prodi/001.jpg" alt="Post Image" />
                 <p align="justify">Halaman mahasiswa ini berfungsi untuk memberikan informasi mengenai kurikulum baru,
-                    informasi jadwal kuliah dan panel administrasi akun. </p><br/>
-            <hr>
-            <h2>Pengumuman untuk mahasiswa</h2>
-            <hr>
-                    <?php
-                    include "../admin/xkoneksi/koneksi.php";
-                    ?>    
-                     <?php
-                     $sql = "SELECT * FROM tb_berita WHERE brt_kategori='Pengumuman' LIMIT 2";
-                      foreach ($dbh->query($sql) as $data) :
-                     ?>
-                <h3><?php echo "$data[brt_judul]";?></h3>
-                <p>Kategori : <font color="green"><?php echo "$data[brt_kategori]";?></font></p>
-                <p><?php echo "<img src='../berita/images/news/$data[brt_gambar]' width='420' height='220'>";?></p>         
-                <p align="justify"><?php echo "$data[brt_isi]";?></p>
-                <hr>
-                 <?php
-                  endforeach;
-                 ?>
+                    informasi jadwal kuliah dan panel administrasi akun. <br/>
 
 
         </div> 

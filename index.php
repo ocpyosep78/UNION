@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Selamat datang di Universitas Ontario</title>
+<title>Handy Dannu W - 10111146, Martono -10111624, Lukman Barokah - 10111639, Rika Yuliana - 10111615</title>
 
 <?php include 'xincludes/stylesheet.php'; ?>
 <?php include 'xincludes/script_dds.php'; ?>
@@ -94,12 +94,12 @@
                 <img src="images/prodi/page.jpg" alt="prodi" class="img_nom img_border" />
                 <p><em>Universitas Ontario memiliki beberapa program studi diantaranya : </em></p>
                 <ul class="list_bullet">
-                    <li><a href="#">Pariwisata</a></li>
-                    <li><a href="#">Sastra Indonesia</a></li>
-                    <li><a href="#">Sastra Inggris</a></li>
-                    <li><a href="#">Sastra Perancis</a></li>
-                    <li><a href="#">Sastra Jerman</a></li>
-                    <li><a href="#">Sastra Rusia</a></li>
+                    <li><a href="prodi/prodi_par.php">Pariwisata</a></li>
+                    <li><a href="prodi/prodi_idn.php">Sastra Indonesia</a></li>
+                    <li><a href="prodi/prodi_eng.php">Sastra Inggris</a></li>
+                    <li><a href="prodi/prodi_fr.php">Sastra Perancis</a></li>
+                    <li><a href="prodi/prodi_ger.php">Sastra Jerman</a></li>
+                    <li><a href="prodi/prodi_rus.php">Sastra Rusia</a></li>
                 </ul>
                 <a href="prodi/prodi.php" class="more">Selanjutnya</a>
 			</div>

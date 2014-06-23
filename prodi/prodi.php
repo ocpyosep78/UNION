@@ -26,14 +26,14 @@
     	<div class="col col_2">
         	<img src="images/prodi/001.jpg" alt="image" height="230px" width="465px" />	
             <p class="image_caption" align="justify">Program Studi Pariwisata - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_par.php" class="more">Detail</a>
             </p>
         </div>
         
         <div class="col col_2 no_mr">        	
             <img src="images/prodi/002.jpg" alt="image" height="230px" width="465px"/>   
             <p class="image_caption" align="justify">Program studi Sastra Indonesia - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_idn.php" class="more">Detail</a>
             </p>
         </div>
         
@@ -42,14 +42,14 @@
         <div class="col col_2">        	
             <img src="images/prodi/003.jpg" alt="image" height="230px" width="465px"  />   
             <p class="image_caption" align="justify">Program Studi Sastra Inggris - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_eng.php" class="more">Detail</a>
             </p>
         </div>
         
         <div class="col col_2 no_mr">
             <img src="images/prodi/004.jpg" alt="image" height="230px" width="465px"  />   
             <p class="image_caption" align="justify">Program Studi Sastra Perancis - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_fr.php" class="more">Detail</a>
             </p>
         </div>
         
@@ -58,14 +58,14 @@
         <div class="col col_2">         
             <img src="images/prodi/005.jpg" alt="image" height="230px" width="465px"  />   
             <p class="image_caption" align="justify">Program Studi Sastra Jerman - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_ger.php" class="more">Detail</a>
             </p>
         </div>
         
         <div class="col col_2 no_mr">
             <img src="images/prodi/006.jpg" alt="image" height="230px" width="465px"  />   
             <p class="image_caption" align="justify">Program Studi Sastra Rusia - Akreditasi A (sangat baik)
-            <a href="#" class="more">Detail</a>
+            <a href="../prodi/prodi_rus.php" class="more">Detail</a>
             </p>
         </div>
         

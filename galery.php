@@ -22,30 +22,41 @@
     
     
     <div id="tubes_main">
-    
-    	<div class="col col_2">
-        	<img src="images/portfolio/01.jpg" alt="image" />
-        </div>
-        
-        <div class="col col_2 no_mr">
-        	<img src="images/portfolio/02.jpg" alt="image" height="230px" width="465px" />
-        </div>
-        
-        <div class="clear"></div>
-        
+                <?php
+                    include "admin/xkoneksi/koneksi.php";
+                ?>
+                <?php
+                     $sql = "SELECT * FROM tb_galeri WHERE gal_tipe='Kampus' ORDER BY gal_tanggal";
+                      foreach ($dbh->query($sql) as $data) :
+                 ?>
         <div class="col col_2">
-        	<a href="images/portfolio/02.jpg" rel="lightbox[gallery]"><img src="images/portfolio/02.jpg" alt="image 2" height="230px" width="465px"  /></a>
+            <h5 align="center"><?php echo "$data[gal_judul]";?></h5>            
+            <p>Kategori : <?php echo "$data[gal_tipe]";?></p>
+            <p align="left">Tanggal foto : <font color="green"><?php echo "$data[gal_tanggal]";?></font></p>
+            <p><?php echo "<img src='images/galeri/$data[gal_foto]' height='230px' width='465px'>";?></p>  
+            <p align="justify"><?php echo "$data[gal_caption]";?></p>
+        </div>
+                <?php
+                  endforeach;
+                 ?>
+                  <?php
+                     $sql = "SELECT * FROM tb_galeri WHERE gal_tipe='Kegiatan' ORDER BY gal_tanggal";
+                    foreach ($dbh->query($sql) as $data) :
+                 ?>
+
+    	<div class="col col_2 no_mr">
+            <h5 align="center"><?php echo "$data[gal_judul]";?></h5>            
+            <p>Kategori : <?php echo "$data[gal_tipe]";?></p>
+            <p align="left">Tanggal foto : <font color="green"><?php echo "$data[gal_tanggal]";?></font></p>
+        	<p><?php echo "<img src='images/galeri/$data[gal_foto]' height='230px' width='465px'>";?></p>  
+            <p align="justify"><?php echo "$data[gal_caption]";?></p>
+        </div>
+                 <?php
+                  endforeach;
+                 ?>
         </div>
         
-        <div class="col col_2 no_mr">
-        	<img src="images/portfolio/04.jpg" alt="image" />
-        </div>
-        
-        <div class="clear"></div>
-            
-            <div class="tubes_paging">
-                <?php include 'xlinker/paging.php'; ?>
-            </div>            
+        <div class="clear"></div>  
     </div>
 </div>
 
@@ -53,7 +64,7 @@
 	<div id="tubes_bottom">
     	
         <div class="col col_3">
-            <?php include 'xlinker/galeri.php'; ?>
+            <?php include 'xlinker/kampus_foto.php'; ?>
         </div>
     	
         <div class="col col_3">

@@ -1,3 +1,9 @@
+<?php session_start(); 
+    
+    if(($_SESSION['ses_username'] != "") and ($_SESSION['ses_password'] != ""))
+    {
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +36,14 @@
                           if (!empty($_GET['hapus']) && $_GET['hapus'] == 'success') {
                           echo '<center>';
                           echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil menghapus data !</font>';
+                          echo '</center>';
+                         }
+                    ?>
+                    <br/><br/>
+                    <?php
+                          if (!empty($_GET['edit']) && $_GET['edit'] == 'success') {
+                          echo '<center>';
+                          echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil mengedit data !</font>';
                           echo '</center>';
                          }
                     ?>
@@ -67,7 +81,7 @@
                 <td><?php echo "$data[kj_nama]";?></td>
                 <td><?php echo "$data[kj_alamat]";?></td>
                 <td><?php echo "$data[kj_detail]";?></td>
-                <td><a href="#<?php echo "$data[kj_id]";?>"><img src="../admin/images/edit.png"</a></td>
+                <td><a href="../berita/edit_kj.php?id=<?php echo "$data[kj_id]";?>"><img src="../admin/images/edit.png"</a></td>
                 <td><a href="../prodi/delete_kj.php?id=<?php echo $data['kj_id'] ?>" onclick="return confirm('Anda yakin akan menghapus data?')">
                     <img src="../admin/images/hapus.png"</a>
                 </td>
@@ -111,3 +125,11 @@
 
 </body>
 </html>
+
+<?php 
+    }
+    else
+    {
+        header('Location: ../admin/login.php');
+    }
+?>

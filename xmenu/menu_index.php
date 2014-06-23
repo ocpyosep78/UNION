@@ -17,6 +17,7 @@
                 <li><a href="berita.php">Berita</a>
                     <ul>
                         <li><a href="berita/pengumuman.php">Pengumuman</a></li>
+                        <li><a href="berita/informasi.php">Informasi</a></li>
                         <li><a href="berita/infokampus.php">Seputar Kampus</a></li>
                   </ul>
                 </li>

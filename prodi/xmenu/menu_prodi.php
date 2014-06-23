@@ -16,13 +16,17 @@
                 </li>
                 <li><a href="../berita/berita.php">Berita</a>
                     <ul>
-                        <li><a href="../berita/pendaftaran.php">Pendaftaran</a></li>
+                        <li><a href="../berita/informasi.php">Informasi</a></li>
                         <li><a href="../berita/pengumuman.php">Pengumuman</a></li>
                         <li><a href="../berita/infokampus.php">Seputar Kampus</a></li>
                   </ul>
                 </li>
                 <li><a href="../galery.php">Galeri</a></li>
-                <li><a href="../mahasiswa/mahasiswa.php">Mahasiswa</a></li>
+                <li><a href="../mahasiswa/mahasiswa.php">Mahasiswa</a>
+                    <ul>
+                    <li><a href="../berita/pendaftaran.php">Pendaftaran</a></li>
+		</ul>	
+		</li>
                 <li><a href="../kontak.php">Kontak</a></li>
             </ul>
             <br style="clear: left" />

@@ -49,7 +49,10 @@ a:link, a:visited { color:#76a33b; text-decoration: none}
 a:hover { text-decoration:underline }
 a:hover,a:active { outline:none }
 
-a.more { display: block; margin-top: 15px; color: #fff; width: 80px; height: 24px; line-height: 24px; text-align: center; background: url(images/tubes_more.png) }
+a.kurmore { display: block; margin-top: 15px; color: #fff; width: 168px; height: 30px; line-height: 24px; text-align: center; background: url(images/cobacoba.png); }
+a.kurmore2 { display: block; margin-top: 15px; color: #fff; width: 168px; height: 30px; line-height: 24px; text-align: center; background: url(images/cobacoba2.png); }
+
+a.more { display: block; margin-top: 15px; color: #fff; width: 80px; height: 24px; line-height: 24px; text-align: center; background: url(images/tubes_more.png); }
 
 ul.nobullet { margin: 0; padding: 0; list-style: none }
 ul.nobullet li { margin: 0; padding: 0 }
@@ -179,7 +182,7 @@ ul.footer_gallery li img { border: 1px solid #777; padding: 4px; background: #33
 
 .sidebar_section_bg {
 	padding: 20px;
-	background: #f3f3f3
+	background: #D4D4D4;
 }
 
 .testimonial {
@@ -224,7 +227,7 @@ p.image_caption { padding: 20px; background: #f2f2f2 }
 .comment_meta { display: block; padding: 10px 0px; font-size: 10px; }
 
 
-.post-item { clear: both; margin: 0 0 40px 0; padding: 0 0 40px 0; border-bottom: 1px solid #ccc }
+.post-item { clear: both; margin: 0 0 40px 0; padding: 0 0 40px 0; border-bottom: 1px solid #ccc; height:600px; width: 650px; overflow-y: auto; }
 .post-item h2 { padding: 0; margin-bottom: 10px }
 .post-meta { margin-bottom: 20px; position: relative; }
 
@@ -297,6 +300,53 @@ p.image_caption { padding: 20px; background: #f2f2f2 }
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+
+#contact_form form .kurikulum { 
+	width: 300px; 
+	padding: 5px; 
+	margin-bottom: 20px; 
+	color: #000000;  
+	background: #E4E7F0; 
+	border: 1px solid #666E1E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold
+}
+
+#contact_form form .inputtinyint {
+	width: 100px; 
+	padding: 5px; 
+	margin-bottom: 20px; 
+	color: #000000;  
+	background: #E4E7F0; 
+	border: 1px solid #666E1E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold
+}
+
+#contact_form form .bacasaja {
+	width: 100px; 
+	padding: 5px; 
+	margin-bottom: 20px; 
+	color: #000000;  
+	background: #CFAB40; 
+	border: 1px solid #666E1E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+#contact_form form .bacasaja2 {
+	width: 300px; 
+	padding: 5px; 
+	margin-bottom: 20px; 
+	color: #000000;  
+	background: #CFAB40; 
+	border: 1px solid #666E1E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
 #contact_form form label { 
 	display: block; 
 	width: 300px; 
@@ -381,8 +431,8 @@ ul.twitter li {  margin: 0 0 20px 0; padding: 0 }
                                 font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
                                 font-size: 12px;
                                 margin: 45px;
-                                width: 480px;
-                                text-align: left;
+                                width: 580px;
+                                text-align: justify;
                                 border-collapse: collapse;
                             }
                             #box-table-a th

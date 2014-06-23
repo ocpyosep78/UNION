@@ -23,18 +23,25 @@
     <div id="tubes_main">
     	<div id="tubes_content" class="left">
             <div class="post-item">
-                <div class="post-meta">
-                    <h3>Panel Kerjasama</h3>                    
+
+
+                <img class="img_border_b img_nom" src="images/kampus/coop.jpg" alt="Post Image" />
+                <p align="justify">Universitas Ontario memiliki banyak relasi dan sudah melakukan kerjasama dengan beberapa
+                    perusahaan terkemuka. Selain mereka melakukan kerjasama, kami juga selalu melakukan state perancangan
+                    kerja dengan mengikut sertakan mahasiswa dalam program kerjanya. Sehingga mahasiswa memiliki pengalaman
+                    dalam dunia organisasi dan pekerjaan.</p>
+                <p>List kerjasama kami : </p>
+                <div class="post-meta">                   
                     <div class="clear"></div>
                 </div>
-                <p align="justify">List kerjasama : </p>
+            </div> 
                 
                 <?php
                     include "admin/xkoneksi/koneksi.php";
                 ?>
 
     <center>
-        <table id="box-table-b">
+        <table id="box-table-c">
             <thead>
                 <tr>
                     <th scope="col">Logo Perusahaan</th>
@@ -59,8 +66,7 @@
         ?>
             </tbody>
         </table>
-
-            </div>    
+   
         </div>         
                 
 		<div id="tubes_sidebar" class="right">

@@ -34,19 +34,28 @@
     <center>
             <div id="contact_form">
 
-                <h2>LOGIN FORM</h2>
-                <form method="post" name="login" action="proses_login.php">      
+                     <?php
+                          if (!empty($_GET['logout']) && $_GET['logout'] == 'true') {
+                          echo '<center>';
+                          echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Anda berhasil logout !</font>';
+                          echo '</center>';
+                         }
+                    ?>
+                    <br/><br/>
+
+                    <p align="center"><img src="../images/union.png" width="420px" height="140px"></p>
+                <form method="post" name="login" action="../admin/proses_login.php">      
                     <label for="username">USERNAME</label> 
-                    <input name="username" type="text" class="input_field" id="username" maxlength="20" color="gray" required/>                    
+                    <input name="username" type="text" class="login" id="username" maxlength="20" color="gray" required/>                    
                   	<label for="password">PASSWORD</label> 
-               	    <input name="password" type="password" class="input_field" id="password" maxlength="16" required/>   
-				</div>                
+               	    <input name="password" type="password" class="login" id="password" maxlength="16" required/>   
+				              
                 <div class="clear"></div>
-                 	<input type="submit" name="submit" value="LOGIN" class="submit_btn" />                    
-                    <input type="reset" name="reset" value="RESET" class="submit_btn" />
+                 	<input type="submit" name="submit" value="LOGIN" class="tb_login" /> 
+                    <input type="reset" name="reset" value="RESET" class="tb_login" /> 
                  
                 </form>
-                </center>
+                </center></div>  
             </div>    
         </div> 
       <div class="clear"></div>

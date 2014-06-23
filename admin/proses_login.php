@@ -1,18 +1,22 @@
-<?php 
-require_once "function.php";
-session_start();
-$username = $_POST["username"];
-$password = $_POST["password"];
-$sql = "SELECT * FROM tabel_login WHERE TB_USERNAME='$username' AND TB_PASSWORD='$password'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
-$count = mysql_num_rows($result);
+<?php
+	session_start();
+	ob_start();
+	include '../admin/xkoneksi/koneksi_mysql.php';
 
-if($count == 1){
-$_SESSION["username"] = $row["TB_USERNAME"];
+	$sql = "SELECT * FROM tb_login WHERE log_username= '$_POST[username]' AND log_password = '$_POST[password]'";
+	$result= mysql_query($sql);
+	$ketemu = mysql_num_rows($result);
+	$ses=mysql_fetch_array($result);
 
-header("location: admin.php");
-}else{
-header("location: login.php?message=0");
-}
+	if ($ketemu > 0) 
+	{
+		$_SESSION['ses_username'] = $ses['log_username'];
+		$_SESSION['ses_password'] = $ses['log_password'];
+		header('Location: ../admin/admin.php');
+	}
+	else
+	{
+		header('Location: ../admin/login.php?message=0');
+	}
 ?>
+

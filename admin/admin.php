@@ -1,3 +1,9 @@
+<?php session_start(); 
+    
+    if(($_SESSION['ses_username'] != "") and ($_SESSION['ses_password'] != ""))
+    {
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,3 +74,12 @@
 
 </body>
 </html>
+
+
+<?php 
+    }
+    else
+    {
+        header('Location: ../admin/login.php');
+    }
+?>

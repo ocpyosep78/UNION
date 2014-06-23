@@ -1,3 +1,9 @@
+<?php session_start(); 
+    
+    if(($_SESSION['ses_username'] != "") and ($_SESSION['ses_password'] != ""))
+    {
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +31,30 @@
     <div id="tubes_main">
         <div id="tubes_content" class="left">
             <div class="post-item">
+
+                    <?php
+                      if (!empty($_GET['edit']) && $_GET['edit'] == 'success') {
+                      echo '<center>';
+                      echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil mengubah staff !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
+                    <?php
+                      if (!empty($_GET['delete']) && $_GET['delete'] == 'success') {
+                      echo '<center>';
+                      echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Berhasil menghapus staff !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <?php
+                      if (!empty($_GET['failed']) && $_GET['failed'] == 'TRUE') {
+                      echo '<center>';
+                      echo '<img src="../admin/images/hapus.png">&nbsp;&nbsp;<font color="red" size="2">Gagal melakukan operasi ! ID terdeteksi GANDA !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
                 <div class="post-meta">
                     <h3>Panel Staff</h3>                    
                     <div class="clear"></div>
@@ -61,8 +91,8 @@
                 <td><?php echo "$data[staff_alamat]";?></td>
                 <td><?php echo "$data[staff_pendidikan]";?></td>
                 <td><?php echo "$data[staff_kontak]";?></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>"><img src="../admin/images/edit.png"</a></td>
-                <td><a href="#<?php echo "$data[staff_id]";?>$nama_foto=<?php echo "$data[staff_foto]";?>">
+                <td><a href="../admin/staff_edit.php?id=<?php echo "$data[staff_id]";?>"><img src="../admin/images/edit.png"</a></td>
+                <td><a href="../admin/del_staff.php?id=<?php echo "$data[staff_id]";?>" onclick="return confirm('Anda yakin akan menghapus data?')">
                     <img src="../admin/images/hapus.png"</a>
                 </td>
             </tr>
@@ -114,3 +144,12 @@
 
 </body>
 </html>
+
+
+<?php 
+    }
+    else
+    {
+        header('Location: ../admin/login.php');
+    }
+?>

@@ -287,6 +287,18 @@ p.image_caption { padding: 20px; background: #f2f2f2 }
 	font-weight: bold
 }
 
+#contact_form form .login { 
+	width: 400px; 
+	padding: 5px; 
+	margin-bottom: 20px; 
+	color: #09630C;  
+	background: #E4E7F0; 
+	border: 1px solid #666E1E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+
 #contact_form form .judul { 
 	width: 620px; 
 	padding: 5px; 
@@ -330,6 +342,21 @@ p.image_caption { padding: 20px; background: #f2f2f2 }
 #contact_form .submit_btn, #comment_form .submit_btn {
 	display: block; 
 	width: 70px; 
+	height: 30px; 
+	line-height: 30px; 
+	padding: 0 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;  
+	background-color: #91c63e; 
+	border: 1px solid #5f8c19; 
+	color: #fff; 
+	font-size: 11px; 
+	cursor: pointer;
+}
+
+#contact_form .tb_login, #comment_form .tb_login {
+	width: 90px; 
 	height: 30px; 
 	line-height: 30px; 
 	padding: 0 8px; 

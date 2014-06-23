@@ -16,12 +16,13 @@
     
     <div id="tubes_page_intro">
     	<h1>Staff Universitas Ontario</h1>
-        <p align="justify">Staff dan Karyawan Universitas Ontario</p>
     </div>
     
     
     <div id="tubes_main">
     	<div id="tubes_content" class="left">
+        <img class="img_border_b img_nom" src="images/kampus/karyawan.jpg" alt="Post Image" />
+        <p align="justify">Berikut adalah list Staff dan Karyawan Universitas Ontario</p>
            <div class="post-item">
                 
                 <?php

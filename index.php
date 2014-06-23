@@ -64,17 +64,24 @@
             <hr />
             
             <div class="post-item last_post">
-            	<div class="post-meta">
-                	<img src="images/author.png" alt="post author image" />
-                    <div class="post-meta-content">
-                    	<h2>Judul artikel</h2>
-                           <span><a href="#">Berita Kampus</a></span>
-                    </div>
-                    <div class="clear"></div>
-				</div>
-                <img class="img_border_b img_nom" src="images/blog/01.jpg" alt="Post Image 2" />
-                <p align="justify">Contoh posting berita kampus.</p>
-                <a class="more" href="fullpost.html">Selanjutnya</a>
+            	<h2>Berita kampus</h2>
+                    <hr>
+                    <?php
+                    include "admin/xkoneksi/koneksi.php";
+                    ?>    
+                     <?php
+                     $sql = "SELECT * FROM tb_berita LIMIT 1";
+                      foreach ($dbh->query($sql) as $data) :
+                     ?>
+                <h3><?php echo "$data[brt_judul]";?></h3>
+                <p>Kategori : <font color="green"><?php echo "$data[brt_kategori]";?></font></p>
+                <p><?php echo "<img src='berita/images/news/$data[brt_gambar]' width='420' height='220'>";?></p>         
+                <p align="justify"><?php echo "$data[brt_isi]";?></p><br/><br/>
+                 <?php
+                  endforeach;
+                 ?>
+
+                <a href="berita.php" class="more">Lainnya</a>
                 </div>
             </div>
 		

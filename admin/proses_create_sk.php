@@ -36,10 +36,7 @@
 		}
 		else
 		{
-			echo "<center><h1>Gagal Menambakan</h1><br>";
-			echo "Error : ".mysql_error();
-			//echo "<br>Kembali<br>
-			//	  <a herf='index.php?menu=mata_kuliah&action=tampil'>Link ini</a></center>>";
+			header ('Location: ../admin/list_staff.php?failed=TRUE');
 		}
 	}
 ?>

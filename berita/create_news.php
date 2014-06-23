@@ -1,3 +1,9 @@
+<?php session_start(); 
+    
+    if(($_SESSION['ses_username'] != "") and ($_SESSION['ses_password'] != ""))
+    {
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,30 +30,44 @@
     
     <div id="tubes_main">
     	<div class="col_32 left">
+
+                     <?php
+                          if (!empty($_GET['buat']) && $_GET['buat'] == 'success') {
+                          echo '<center>';
+                          echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Konten berita berhasil dibuat !</font>';
+                          echo '</center>';
+                         }
+                    ?>
+                    <br/><br/>
+
             <div id="contact_form">
                 <h2>Buat Konten Berita</h2>
-                <form method="post" name="contact" action="#">
+                <form enctype="multipart/form-data" method="post" name="contact" action="../berita/news_proc.php">
                 
-                <div>                
+                <div>
+                    <label for="id">Berita ID</label> 
+                    <input name="brt_id" type="text" class="kategori" id="brt_id" maxlength="6" placeholder="Contoh : BRT002" required/>
+
                     <label for="judul">Judul</label> 
-                    <input name="judul" type="text" class="judul" id="judul" required/>
+                    <input name="brt_judul" type="text" class="judul" id="brt_judul" required/>
                     
-                  	<label for="email">Kategori</label>
-                        <select name="kategori" class="kategori">
-                            <option name="pengumuman">Pengumuman</option>
-                            <option name="berita_kampus">Berita Kampus</option>
+                  	<label for="brt_kategori">Kategori</label>
+                        <select name="brt_kategori" class="kategori">
+                            <option value="Pengumuman">Pengumuman</option>
+                            <option value="Berita Kampus">Berita Kampus</option>
+                            <option value="Informasi">Informasi</option>
                         </select>
 
 
-                    <label for="foto">Gambar / foto (optional) :</label>
-                    <input name="berita_foto" type="file" class="input_field" required/>
+                    <label for="brt_gambar">Gambar / foto :</label>
+                    <input name="brt_gambar" type="file" class="input_field" required/>
                     
 				</div>
-                <label for="message">Isi Konten</label> 
-                    <textarea></textarea>
+                <label for="brt_isi">Isi Konten</label> 
+                    <textarea name="brt_isi"></textarea>
                     <br>                
                 <div class="clear"></div>
-                 	<input type="submit" name="submit" value="Buat Berita" class="submit_btn" />
+                 	<input type="submit" name="submit" value="Buat Berita" class="submit_btn" onclick="return confirm('Buat konten berita ini ?')"/>
                  
                 </form>
             </div>    
@@ -90,3 +110,11 @@
 
 </body>
 </html>
+
+<?php 
+    }
+    else
+    {
+        header('Location: ../admin/login.php');
+    }
+?>

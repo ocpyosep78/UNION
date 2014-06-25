@@ -61,46 +61,7 @@
                 </div>
                 <p align="justify">List karyawan dan staff : </p>
                 
-                <?php
-                    include "../admin/xkoneksi/koneksi.php";
-                ?>
-
-    <center>
-        <table id="box-table-a">
-            <thead>
-                <tr>
-                    <th scope="col">Profil</th>
-                    <th scope="col">Staff ID</th>
-                    <th scope="col">NAMA</th>
-                    <th scope="col">Jabatan</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Pendidikan</th>
-                    <th scope="col">Kontak</th>
-                </tr>
-            </thead>
-        <tbody>
-        <?php
-            $sql = "SELECT * FROM tb_staff ORDER BY staff_id";
-            foreach ($dbh->query($sql) as $data) :
-        ?>
-            <tr>
-                <td><?php echo "<img src='../admin/images/staff/$data[staff_foto]' width='80' height='80'>";?></td>
-                <td><?php echo "$data[staff_id]";?></td>
-                <td><?php echo "$data[staff_nama]";?></td>
-                <td><?php echo "$data[staff_jabatan]";?></td>
-                <td><?php echo "$data[staff_alamat]";?></td>
-                <td><?php echo "$data[staff_pendidikan]";?></td>
-                <td><?php echo "$data[staff_kontak]";?></td>
-                <td><a href="../admin/staff_edit.php?id=<?php echo "$data[staff_id]";?>"><img src="../admin/images/edit.png"</a></td>
-                <td><a href="../admin/del_staff.php?id=<?php echo "$data[staff_id]";?>" onclick="return confirm('Anda yakin akan menghapus data?')">
-                    <img src="../admin/images/hapus.png"</a>
-                </td>
-            </tr>
-        <?php
-            endforeach;
-        ?>
-            </tbody>
-        </table>
+                <?php include '../admin/look.php';?>
 
             </div>           
             

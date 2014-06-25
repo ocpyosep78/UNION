@@ -41,6 +41,14 @@
                           echo '</center>';
                          }
                     ?>
+                    <br/><br/> 
+                    <?php
+                          if (!empty($_GET['login']) && $_GET['login'] == 'false') {
+                          echo '<center>';
+                          echo '<img src="../admin/images/hapus.png">&nbsp;&nbsp;<font color="red" size="2">USERNAME/PASSWORD SALAH !</font>';
+                          echo '</center>';
+                         }
+                    ?>
                     <br/><br/>
 
                     <p align="center"><img src="../images/union.png" width="420px" height="140px"></p>

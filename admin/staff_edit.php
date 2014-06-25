@@ -96,15 +96,6 @@
         </div>
                 
         <div id="tubes_sidebar" class="right">
-            
-
-            <div class="sidebar_section sidebar_section_bg">
-                <form action="" method="post">  
-                <h4>Cari Data Staff</h4>
-                    <input size="30" placeholder="Cari nama staff" type="search" name="cari" id="cari" required>&nbsp;
-                    <input type="image" name"submit" value="submit" src="../images/cari.png">
-                </form>
-            </div>
 
             <div class="sidebar_section sidebar_section_bg">
                 <?php include 'xmenu/side_admin.php';?>

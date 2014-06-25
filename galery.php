@@ -17,7 +17,7 @@
     
     <div id="tubes_page_intro">
     	<h1>Galeri</h1>
-        <p>Berikut adalah galeri kampus dan aktivitas kami <font size="1">(klik pada gambar untuk memperbesar)</font> </p>
+        <p>Berikut adalah galeri kampus dan aktivitas kami</p>
     </div>
     
     

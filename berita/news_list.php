@@ -22,7 +22,7 @@
     <?php include 'xmenu/menu_berita.php'; ?>
     
     <div id="tubes_page_intro">
-        <h1>List Kurikulum</h1>
+        <h1>List Berita</h1>
         <p align="justify">Selamat datang admin !</p>
     </div>
     

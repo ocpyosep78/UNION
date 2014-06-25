@@ -1,6 +1,6 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/ddsmoothmenu.js">
-
+<script type="text/javascript" src="js/jquery.validate.js"></script>
 </script>
 
 <script type="text/javascript">

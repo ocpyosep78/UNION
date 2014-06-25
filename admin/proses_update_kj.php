@@ -39,7 +39,7 @@
 		}
 		else
 		{
-			header ('Location: ../berita/edit_kj.php?id=$kj_id');
+			header ('Location: ../admin/coop_list.php?failed=TRUE');
 		}
 	}
 ?>

@@ -47,7 +47,15 @@
                           echo '</center>';
                          }
                     ?>
-                    <br/><br/>
+                    <br/><br/> 
+                    <?php
+                      if (!empty($_GET['failed']) && $_GET['failed'] == 'TRUE') {
+                      echo '<center>';
+                      echo '<img src="../admin/images/hapus.png">&nbsp;&nbsp;<font color="red" size="2">Gagal melakukan operasi ! ID terdeteksi GANDA !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
                 
                 <div class="post-meta">                   
                     <h3>Panel Kerjasama</h3>                    

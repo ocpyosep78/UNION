@@ -22,7 +22,7 @@
                   </ul>
                 </li>
                 <li><a href="../galery.php">Galeri</a></li>
-                <li><a href="../mahasiswa.php">Mahasiswa</a>
+                <li><a href="../mahasiswa/mahasiswa.php">Mahasiswa</a>
 			<ul>
                         <li><a href="../berita/pendaftaran.php">Pendaftaran</a></li></ul>
 		</li>

@@ -26,7 +26,8 @@
             <hr>
             <img class="img_border_b img_nom" src="../mahasiswa/images/kampus/mahasiswa.jpg" alt="Post Image" />
                 <p align="justify">Halaman mahasiswa ini berfungsi untuk memberikan informasi mengenai kurikulum baru,
-                    informasi jadwal kuliah dan panel administrasi akun. </p><br/>
+                    informasi jadwal kuliah dan informasi kerja praktek, skripsi dan informasi lainnya. Login untuk mengakses halaman
+                    indeks mahasiswa.</p><br/>
             <hr>
             <h2>Pengumuman untuk mahasiswa</h2>
             <hr>
@@ -51,19 +52,30 @@
                 
 		<div class="col_3 right">
 			<h2>Panel Mahasiswa</h2>
-			<div class="sidebar_section">
+			<div class="sidebar_section"> 
+                <?php
+                      if (!empty($_GET['logout']) && $_GET['logout'] == 'true') {
+                      echo '<img src="../images/ok.png">&nbsp;&nbsp;<font color="green" size="2">Anda berhasil logout</font>';
+                     }
+                ?>
+                     <br/><br/>
                 <h3>LOGIN</h3>
-                <form method="post" action="#" name="login">
+                <form method="post" action="../mahasiswa/cek_login.php" name="login">
                 <label for="username">Username</label><br/> 
-                <input name="username" type="text" size="20px" id="username" maxlength="30" /><br/>
+                <input name="username" type="text" size="30px" id="username" maxlength="30" /><br/>
                 
                 <label for="password">Password</label><br/> 
-                <input name="password" type="password" size="20px" id="password" maxlength="30" />
+                <input name="password" type="password" size="30px" id="password" maxlength="30" />
 
                 <br/><br/>
                 <input type="submit" name="submit" value="LOGIN" class="submit_btn" />
-                <input type="reset" name="reset" value="RESET" class="submit_btn" />
-                </form>
+
+                <?php
+                      if (!empty($_GET['attemp']) && $_GET['attemp'] == 'false') {
+                      echo '<img src="../admin/images/delete.png">&nbsp;&nbsp;<font color="green" size="1">USERNAME/PASSWORD SALAH</font>';
+                     }
+                ?>
+                     <br/><br/>
             </div>
             <div class="sidebar_section">
                 <h3>Untuk bantuan hubungi :</h3>

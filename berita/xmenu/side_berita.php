@@ -23,8 +23,8 @@
                     </li>
                     <li><a href="#" onclick="toggle('node5')">Panel Mahasiswa</a>
                         <ul id="node5" style="display:none">
-                            <li><a href="#">List mahasiswa</a></li>
                             <li><a href="../berita/reg_list.php">Pendaftaran yang masuk</a></li>
+                            <li><a href="../admin/list_file.php">File Pendukung Perkuliahan</a></li>
                         </ul>
                     </li>
                     <li><a href="#" onclick="toggle('node6')">Panel Buku Tamu</a>

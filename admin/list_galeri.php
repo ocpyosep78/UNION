@@ -54,7 +54,15 @@
                           echo '</center>';
                          }
                     ?>
-                    <br/><br/>
+                    <br/><br/> 
+                    <?php
+                      if (!empty($_GET['failed']) && $_GET['failed'] == 'TRUE') {
+                      echo '<center>';
+                      echo '<img src="../admin/images/hapus.png">&nbsp;&nbsp;<font color="red" size="2">Gagal melakukan operasi ! ID terdeteksi GANDA !</font>';
+                      echo '</center>';
+                     }
+                     ?>
+                     <br/><br/>
                 <h2>List galeri : </h2>
                 
                     <?php
@@ -64,8 +72,8 @@
                      $sql = "SELECT * FROM tb_galeri ORDER BY gal_id";
                       foreach ($dbh->query($sql) as $data) :
                     ?>
-                    <p align="left">NO : <?php echo "$data[gal_id]";?></p>
-                    <h3><?php echo "$data[gal_judul]";?></h3>
+                    <h3><?php echo "$data[gal_judul]";?></h3>                    
+                    <p align="left"> ID : <?php echo "$data[gal_id]";?></p>
                     <p>Kategori : <?php echo "$data[gal_tipe]";?></p>
                     <p>Tanggal Foto : <font color="green"><?php echo "$data[gal_tanggal]";?></font></p>
                     <p><?php echo "<img src='../images/galeri/$data[gal_foto]' height='230px' width='465px'>";?></p>         

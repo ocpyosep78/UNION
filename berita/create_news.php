@@ -42,7 +42,7 @@
 
             <div id="contact_form">
                 <h2>Buat Konten Berita</h2>
-                <form enctype="multipart/form-data" method="post" name="contact" action="../berita/news_proc.php">
+                <form enctype="multipart/form-data" method="post" name="berita" action="../berita/news_proc.php">
                 
                 <div>
                     <label for="id">Berita ID</label> 
